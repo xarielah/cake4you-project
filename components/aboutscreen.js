@@ -1,5 +1,4 @@
 import SimpleSection from './layouts/simplesection';
-import workPic from '../public/work/cake_tiktok.jpg';
 
 const AboutScreen = () => {
   const desc =
