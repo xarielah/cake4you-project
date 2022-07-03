@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Container } from '@chakra-ui/react';
+import { Container, Flex } from '@chakra-ui/react';
 import Navbar from '../navbar';
 import FadeElement from './fadeelemnts';
 import Footer from '../footer';
@@ -14,11 +14,9 @@ const MainLayout = ({ children }) => {
       <Navbar />
 
       <Container pb={16} maxW="container.xl">
-        <FadeElement index={0.5}>
-          {children}
-        </FadeElement>
+        <FadeElement index={0.5}>{children}</FadeElement>
       </Container>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
