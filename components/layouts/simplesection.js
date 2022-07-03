@@ -1,24 +1,23 @@
-import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Image, Divider } from '@chakra-ui/react';
 
 const RespoinsiveBox = ({ children }) => (
-  <Box align="center" p={7} m="auto" w={{ base: '100%', md: '50%' }}>
+  <Box w="100%" mt={10} textAlign="center">
     {children}
   </Box>
 );
 
-const SimpleSection = ({ pic, secTitle, secDesc, reverse }) => {
+const SimpleSection = ({ secTitle, secDesc }) => {
   return (
-    <Flex flexDirection={{ base: `${!reverse ? 'column-reverse' : 'column'}`, md: `${reverse ? 'row-reverse' : 'row'}` }}>
+    <Flex>
       <RespoinsiveBox>
-        <Heading mb={2} letterSpacing={'tighter'} fontStyle={'italic'} size="lg">
+        <Divider style={{ color: 'black' }} />
+        <Heading my={6} size="lg">
           {secTitle}
         </Heading>
-        <Text fontSize="1.2em" lineHeight={1.3}>
+        <Divider style={{ color: 'black' }} />
+        <Text my={5} fontSize="1em" lineHeight={1.5}>
           {secDesc}
         </Text>
-      </RespoinsiveBox>
-      <RespoinsiveBox>
-        <Image borderRadius={'full'} w={'300px'} boxShadow="md" h={'300px'} objectFit="cover" src={pic.src} alt="display pic" />
       </RespoinsiveBox>
     </Flex>
   );
