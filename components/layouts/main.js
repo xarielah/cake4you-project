@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => {
 
       <Navbar />
 
-      <Container maxW="container.xl">
+      <Container pb={16} maxW="container.xl">
         <FadeElement index={0.5}>
           {children}
         </FadeElement>
